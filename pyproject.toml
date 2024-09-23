@@ -5,6 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "jupyterbook_patches"
 dynamic = ["version"]
+readme = { file = "README.md", content-type = "text/markdown" }
 authors = [
     { name = "rstular", email = "r.stular@student.tudelft.nl" }
 ]
