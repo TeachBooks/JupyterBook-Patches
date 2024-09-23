@@ -1,0 +1,7 @@
+html[data-theme="dark"] img:not(.only-dark):not(.dark-light) {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+html[data-theme="dark"] .logo img {
+  filter: invert(1) hue-rotate(180deg);
+}

@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jupyterbook_patches"
+dynamic = ["version"]
+authors = [
+    { name = "rstular", email = "r.stular@student.tudelft.nl" }
+]
+description = "A collection of useful Jupyter Book patches."
+dependencies = [
+    "sphinx"
+]
+requires-python = ">=3.9"
+
+[tool.hatch]
+version.source = "vcs"
+build.hooks.vcs.version-file = "src/jupyterbook_patches/_version.py"

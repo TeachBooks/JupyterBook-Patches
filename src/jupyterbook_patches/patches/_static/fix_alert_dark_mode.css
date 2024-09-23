@@ -1,0 +1,4 @@
+html[data-theme="dark"] .alert {
+  --bs-alert-bg: #132119;
+  --bs-alert-color: #d1e7dd;
+}

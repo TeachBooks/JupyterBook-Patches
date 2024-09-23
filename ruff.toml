@@ -1,0 +1,3 @@
+line-length = 120
+select = ["E", "F", "PL", "W", "B", "Q", "UP", "I", "C4", "DTZ", "ICN", "PIE", "PYI", "RET", "SLF", "SIM", "TID", "TCH", "ARG", "PERF", "RUF"]
+target-version = "py39"
