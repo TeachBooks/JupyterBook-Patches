@@ -4,6 +4,8 @@
 :class: tip
 This section is useful for user type 4-5.
 ```
++++
+{bdg-primary}`Sphinx Extension`
 
 This Sphinx extension fixes an issue where drop down menus would still take up space after being minimized, and the patch fixes it through some css.
 
