@@ -1,4 +1,4 @@
-# Sphinx extension: JupyterBook-Patches
+# JupyterBook-Patches
 
 ```{admonition} User types
 :class: tip
