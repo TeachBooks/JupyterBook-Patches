@@ -1,6 +1,8 @@
 # Sphinx extension: JupyterBook-Patches
 
-This Sphinx extension fixes an issue where drop down menus would still take up space after being minimized, and the patch fixes it through some css.
+This Sphinx extension fixes:
+- an issue where drop down menus would still take up space after being minimized, and the patch fixes it through some css.
+- an issue where in drop down code cells the shown summary remained lightgray instead of turning darkgrey. Fix through css.
 
 ## Installation
 To install the Sphinx-JupyterBook-Patches, follow these steps:
