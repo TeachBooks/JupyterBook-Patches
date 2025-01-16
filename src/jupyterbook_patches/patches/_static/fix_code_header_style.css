@@ -1,3 +1,18 @@
-h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+h1 code {
     font-size: var(--pst-font-size-h1);
+}
+h2 code {
+    font-size: var(--pst-font-size-h2);
+}
+h3 code {
+    font-size: var(--pst-font-size-h3);
+}
+h4 code {
+    font-size: var(--pst-font-size-h4);
+}
+h5 code {
+    font-size: var(--pst-font-size-h5);
+}
+h6 code {
+    font-size: var(--pst-font-size-h6);
 }
