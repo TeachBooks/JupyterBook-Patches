@@ -1,4 +1,13 @@
-# Sphinx extension: JupyterBook-Patches
+# JupyterBook-Patches
+
+> This page reuses BSD 3-Clause License content from {cite:t}`patches`. {fa}`quote-left`{ref}`Find out more here.<external_resources>`
+
+```{admonition} User types
+:class: tip
+This section is useful for user type 4-5.
+```
++++
+{bdg-primary}`Sphinx Extension`
 
 This Sphinx extension fixes:
 - an issue where drop down menus would still take up space after being minimized, and the patch fixes it through some css.
