@@ -4,6 +4,7 @@ This Sphinx extension fixes:
 - an issue where drop down menus would still take up space after being minimized, and the patch fixes it through some css.
 - an issue where in drop down code cells the shown summary remained lightgray instead of turning darkgrey. Fix through css.
 - an issue where the size of code in a header is not the correct font size. Fix through css.
+- an issue where two buttons for interactive matplotlib widget do not appear.
 
 ## Installation
 To install the Sphinx-JupyterBook-Patches, follow these steps:
