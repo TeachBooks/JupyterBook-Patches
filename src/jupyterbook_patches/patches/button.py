@@ -19,9 +19,12 @@ def add_css_fix(app: Sphinx,pagename: str,templatename: str, context: dict[str,a
             filename = context['sourcename']
             with open(os.path.join(dirpath,filename),'r') as file:
                 for line_number, line in enumerate(file, start=1):
-                    if line.strip().replace('"','')[0] != '#':
-                         if '%matplotlib widget' in line or '%matplotlib ipympl' in line:
-                             app.add_css_file('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css',priority=1000,integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==",crossorigin="anonymous")
+                    try:
+                        if line.strip().replace('"','')[0] != '#':
+                            if '%matplotlib widget' in line or '%matplotlib ipympl' in line:
+                                app.add_css_file('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css',priority=1000,integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==",crossorigin="anonymous")
+                    except:
+                        pass
 
     pass
 
@@ -36,9 +39,12 @@ def remove_js_fix(app: Sphinx, exc):
             if filename.endswith('.ipynb'):
                 with open(os.path.join(dirpath,filename),'r') as file:
                     for line_number, line in enumerate(file, start=1):
-                        if line.strip().replace('"','')[0] != '#':
-                            if '%matplotlib widget' in line or '%matplotlib ipympl' in line:
-                                files.append(filename.replace('.ipynb','.html'))
+                        try:
+                            if line.strip().replace('"','')[0] != '#':
+                                if '%matplotlib widget' in line or '%matplotlib ipympl' in line:
+                                    files.append(filename.replace('.ipynb','.html'))
+                        except:
+                            pass
     
     # for each of the build files, load file found and replace
     for dirpath, dirnames, filenames in os.walk(builddir):
