@@ -9,3 +9,4 @@ class DarkModePatch(BasePatch):
         app.add_css_file(filename="fix_admonition_style.css")
         app.add_css_file(filename="fix_dropdown_style.css")
         app.add_css_file(filename="fix_code_header_style.css")
+        app.add_css_file(filename="fix_sidebar_scroll.css")
