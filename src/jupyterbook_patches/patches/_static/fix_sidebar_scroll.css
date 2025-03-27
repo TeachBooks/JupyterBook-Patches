@@ -1,3 +1,4 @@
 .bd-sidebar-primary  {
     display: block !important; /* Enforce block display instead of flex to prevent scrollbar if unnecessary*/
+    max-height: 99vh !important; /* Enforce max-height to prevent sidebar from overflowing */
 }
