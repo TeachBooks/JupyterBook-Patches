@@ -1,7 +1,3 @@
 .bd-sidebar-primary {
     display: block !important; /* Always enforce block display */
 }
-
-.bd-sidebar-primary:not(.bd-header-announcement) {
-    max-height: 99vh !important; /* Apply max-height only if there is no .bd-header-announcement */
-}
