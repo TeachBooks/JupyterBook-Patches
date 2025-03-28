@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - email: info@teachbooks.io
+    name: 'TeachBooks Development Team'
+    website: 'https://teachbooks.io/'
+title: "JupyterBook-Patches"
+version: 1.4.3
+date-released: 2025-03-28
+repository-code: 'https://github.com/TeachBooks/JupyterBook-Patches'
+url: >-
+  https://teachbooks.io/manual/external/JupyterBook-Patches/README.html
+identifiers:
+  - type: url
+    value: https://pypi.org/project/jupyterbook-patches/
+    description: 'PyPi publication'
+license: BSD-3-Clause
