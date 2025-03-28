@@ -1,5 +1,7 @@
 # Sphinx extension: JupyterBook-Patches
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15101012.svg)](https://doi.org/10.5281/zenodo.15101012)
+
 This Sphinx extension fixes:
 - an issue where drop down menus would still take up space after being minimized, and the patch fixes it through some css.
 - an issue where in drop down code cells the shown summary remained lightgray instead of turning darkgrey. Fix through css.
