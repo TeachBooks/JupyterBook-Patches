@@ -1,7 +1,9 @@
 /**
   * This file is an adaptation of the jupyterbook theme's _margin.scss file
   * to avoid importing the entire jupyterbook theme.
+  * See the license for the jupyterbook theme in the LICENSE file.
   * It is used to fix the margin behaviour between 992 and 1200px
+  * This file is converted to css with https://jsonformatter.org/scss-to-css
   */
 
 // manually define a few variables to avoid importing the entire jupyterbook theme
@@ -42,7 +44,7 @@ $margin-offset: -$margin-width-relative-to-content;
   margin-left: 0.5rem;
 
   // Wide screens and printing should force margin behavior
-  @media (min-width: variables.$breakpoint-xl), print {
+  @media (min-width: $breakpoint-xl), print {
     width: $margin-width-width-gutter;
     margin: 0 $margin-offset 0 0;
 
@@ -75,7 +77,7 @@ label.margin-toggle {
   sup {
     user-select: none;
   }
-  @media (max-width: variables.$breakpoint-xl) {
+  @media (max-width: $breakpoint-xl) {
     cursor: pointer;
     color: rgb(0, 113, 188);
     &.marginnote-label {
@@ -89,7 +91,7 @@ label.margin-toggle {
 
 input.margin-toggle {
   display: none;
-  @media (max-width: variables.$breakpoint-xl) {
+  @media (max-width: $breakpoint-xl) {
     &:checked + .sidenote,
     &:checked + .marginnote {
       display: block;
@@ -105,14 +107,14 @@ input.margin-toggle {
 
 span.sidenote,
 span.marginnote {
-  z-index: variables.$zindex-middle;
+  z-index: $zindex-middle;
   position: relative;
   border-left: none;
   @include margin-content();
   sup {
     user-select: none;
   }
-  @media (max-width: variables.$breakpoint-xl) {
+  @media (max-width: $breakpoint-xl) {
     display: none;
   }
 }
@@ -155,7 +157,7 @@ aside.sidebar.margin {
     }
   }
 
-  @media (min-width: variables.$breakpoint-xl) {
+  @media (min-width: $breakpoint-xl) {
     // No border for margin sidebars on wide screen
     border: none;
 
@@ -173,7 +175,7 @@ aside.margin,
 .margin.docutils.container,
 .cell.tag_popout,
 .cell.tag_margin {
-  z-index: variables.$zindex-middle;
+  z-index: $zindex-middle;
   position: relative;
   @include margin-content();
 
@@ -187,7 +189,7 @@ aside.margin,
 div.figure.margin-caption p.caption,
 div.figure.margin-caption figcaption,
 figure.margin-caption figcaption {
-  z-index: variables.$zindex-middle;
+  z-index: $zindex-middle;
   position: relative;
   @include margin-content();
 }
@@ -208,9 +210,9 @@ div.cell.tag_full-width,
 div.cell.tag_full_width,
 div.full_width,
 div.full-width {
-  z-index: variables.$zindex-middle;
+  z-index: $zindex-middle;
   position: relative;
-  @media (min-width: variables.$breakpoint-xl) {
+  @media (min-width: $breakpoint-xl) {
     max-width: $content-fullwidth-width;
     width: $content-fullwidth-width;
   }
