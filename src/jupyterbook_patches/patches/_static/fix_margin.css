@@ -168,3 +168,25 @@ div.cell.tag_full-width, div.cell.tag_full_width, div.full_width, div.full-width
         width: 136%;
    }
 }
+
+
+/* Override the border style for aside.sidebar.margin, these were not included in the scss */
+@media (min-width: 992px) {
+    aside.sidebar.margin {
+        border: initial !important; /* Reset the border property */
+    }
+}
+
+/* Override the styles for margin-related elements */
+@media (min-width: 992px), print {
+    .cell.tag_margin, 
+    .cell.tag_popout, 
+    .margin.docutils.container, 
+    aside.margin, 
+    div.margin, 
+    figure.margin {
+        clear: none !important; /* Disable the clear property */
+        margin: initial !important; /* Reset the margin property */
+        width: auto !important; /* Reset the width property */
+    }
+}
