@@ -11,6 +11,9 @@ repository-code: 'https://github.com/TeachBooks/JupyterBook-Patches'
 url: >-
   https://teachbooks.io/manual/external/JupyterBook-Patches/README.html
 identifiers:
+  - type: doi
+    value: 10.5281/zenodo.15101012
+    description: Zenodo record
   - type: url
     value: https://pypi.org/project/jupyterbook-patches/
     description: 'PyPi publication'
