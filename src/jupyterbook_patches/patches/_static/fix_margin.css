@@ -1,12 +1,10 @@
 /**
   * This file is an adaptation of the jupyterbook theme's _margin.scss file
-  * to avoid importing the entire jupyterbook theme.
   * See the license for the jupyterbook theme in the LICENSE file.
   * It is used to fix the margin behaviour between 992 and 1200px
-  * This file is converted to css with https://jsonformatter.org/scss-to-css
   */
 
-/* Override the border style for aside.sidebar.margin, these were not included in the scss */
+/* Override the border style for aside.sidebar.margin */
 @media (min-width: 992px) and (max-width: 1200px) {
     aside.sidebar.margin {
         border: 1px solid var(--pst-color-border) !important;
