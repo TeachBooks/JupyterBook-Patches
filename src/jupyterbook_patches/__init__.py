@@ -14,7 +14,7 @@ def set_static_path(app):
     app.config.html_static_path.append(str(static_path))
 
 
-def setup_patch_configuration(app: Sphinx, _env, _docnames):
+def setup_patch_configuration(app: Sphinx,config):
     patch_config = app.config.patch_config
     defaults = {"disabled-patches": []}
 
@@ -33,7 +33,7 @@ def setup_patch_configuration(app: Sphinx, _env, _docnames):
         logger.info("Disabled patches: %s", ", ".join(patch_config["disabled-patches"]))
 
 
-def init_patches(app: Sphinx, _env, _docnames):
+def init_patches(app: Sphinx,config):
     patch_config = app.config.patch_config
     available_patches = load_patches()
 
