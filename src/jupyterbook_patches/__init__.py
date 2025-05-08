@@ -47,8 +47,8 @@ def init_patches(app: Sphinx, _env, _docnames):
 def setup(app: Sphinx):
     # Add our static path
     app.connect("builder-inited", set_static_path)
-    app.connect("env-before-read-docs", setup_patch_configuration)
-    app.connect("env-before-read-docs", init_patches)
+    app.connect("config-inited", setup_patch_configuration)
+    app.connect("config-inited", init_patches)
     app.add_config_value("patch_config", {}, "html")
 
     return {
