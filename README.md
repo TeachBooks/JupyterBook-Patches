@@ -48,7 +48,7 @@ jupyterbook_patches
 **Step 3: Enable in `_config.yml`**
 
 In your `_config.yml` file, add the extension to the list of Sphinx extra extensions:
-```
+```yaml
 sphinx: 
     extra_extensions:
         - jupyterbook_patches
@@ -57,7 +57,7 @@ sphinx:
 **Step 4 (optional): Disable patches in `_config.yml`**
 
 In your `_config.yml` file, add disable patches you do not wish:
-```
+```yaml
 sphinx: 
     config:
         patch_config:
@@ -68,7 +68,7 @@ Replace `[]` by a list of strings to disable patches. Use the patch name as indi
 
 For example, to disable the `mathjax` patch:
 
-```
+```yaml
 sphinx: 
     config:
         patch_config:
@@ -77,7 +77,7 @@ sphinx:
 
 For example, to disable the `layout` and `button` patches:
 
-```
+```yaml
 sphinx: 
     config:
         patch_config:
