@@ -11,6 +11,18 @@ class MathJaxPatch(BasePatch):
 
 def set_mathjax_path(app:Sphinx,config):
 
+    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    print("!!!!!                                       !!!!!")
+    print(f"!!!!! Old path: {app.config.mathjax_path}  !!!!!")
+    print("!!!!!                                       !!!!!")
+    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+
     app.config.mathjax_path = 'mathjax_patch.js'
+
+    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    print("!!!!!                                       !!!!!")
+    print(f"!!!!! New path: {app.config.mathjax_path}  !!!!!")
+    print("!!!!!                                       !!!!!")
+    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
     
     pass
