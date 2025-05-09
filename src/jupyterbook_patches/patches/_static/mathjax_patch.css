@@ -1,0 +1,3 @@
+@supports (-moz-appearance:none) {
+  .tippy-box { display:none !important; }
+}
