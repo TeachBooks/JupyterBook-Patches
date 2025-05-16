@@ -7,7 +7,6 @@ class MathJaxPatch(BasePatch):
     def initialize(self, app):
         logger.info("Initializing MathJax patch")
         app.add_js_file(filename="mathjax_patch.js")
-        app.add_css_file(filename="mathjax_patch.css")
         app.connect('builder-inited',set_mathjax_path)
 
 def set_mathjax_path(app:Sphinx):
