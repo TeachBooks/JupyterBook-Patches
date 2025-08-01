@@ -23,6 +23,7 @@ This Sphinx extension fixes:
     - an issue where the size of code in a header is not the correct font size. Fix through css.
     - an issue where the sidebar shows a scrollbar even if that's not needed
     - an issue where the margin causes a scroll bar for a window between 992 and 1200px.
+    - an issue where the caption text of a figure is aligned on the left for multi-line caption text
 - with a `button` patch:
     - an issue where two buttons for interactive matplotlib widget do not appear.
 - with a `mathjax` patch:
