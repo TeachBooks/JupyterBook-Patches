@@ -16,6 +16,8 @@ This Sphinx extension fixes:
     - an issue where in the Firefox browser the CHTML renderer of MathJax does not render thin lines consistently. Fixed by selecting the SVG renderer *only* for the Firefox browser. 
 - with a `download` patch:
     - an issue where the standard download button for downloading `.ipynb` and `.md` files opens a new tab in some browsers instead of downloading the file. Fixed by adding the `download` attribute to the download links.
+- with a `hash` patch:
+    - an issue where if the URL contains a specific element id, the page scrolls to the element on the initial/partial page load and does not scroll to that element after complete page load. Fixed by adding a small javascript that scrolls to the element after complete page load.
 
 ## Installation
 To install the Sphinx-JupyterBook-Patches, follow these steps:
