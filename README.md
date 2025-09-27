@@ -30,6 +30,8 @@ This Sphinx extension fixes:
     - an issue where in the Firefox browser the CHTML renderer of MathJax does not render thin lines consistently. Fixed by selecting the SVG renderer *only* for the Firefox browser. 
 - with a `download` patch:
     - an issue where the standard download button for downloading `.ipynb` and `.md` files opens a new tab in some browsers instead of downloading the file. Fixed by adding the `download` attribute to the download links.
+- with a `hash` patch:
+    - an issue where if the URL contains a specific element id, the page scrolls to the element on the initial/partial page load and does not scroll to that element after complete page load. Fixed by adding a small javascript that scrolls to the element after complete page load.
 
 ## Installation
 To install the Sphinx-JupyterBook-Patches, follow these steps:
@@ -87,6 +89,9 @@ sphinx:
             disabled-patches: ["button","layout"]
 ```
 
+## Part of TeachBooks Favourites
+
+This extension is part of [TeachBooks Favourites](https://github.com/TeachBooks/TeachBooks-Favourites), a Sphinx extension which collects all of TeachBooks' favourite features in one place.
 
 ## Contribute
 This tool's repository is stored on [GitHub](https://github.com/TeachBooks/JupyterBook-Patches). The `README.md` of the branch `manual_docs` is also part of the [TeachBooks manual](https://teachbooks.io/manual/external/JupyterBook-Patches/README.html) as a submodule. If you'd like to contribute, you can create a fork and open a pull request on the [GitHub repository](https://github.com/TeachBooks/JupyterBook-Patches). To update the `README.md` shown in the TeachBooks manual, create a fork and open a merge request for the [GitHub repository of the manual](https://github.com/TeachBooks/manual). If you intent to clone the manual including its submodules, clone using: `git clone --recurse-submodulesgit@github.com:TeachBooks/manual.git`.
