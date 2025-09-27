@@ -12,6 +12,9 @@ This section is useful for user type 4-5.
 {bdg-primary}`Sphinx Extension`
 {bdg-link-light}`Included in TeachBooks Template <../template/README.html>`
 {bdg-link-primary-line}`Included in TeachBooks Favourites <../../features/favourites.html>`
+````
+
+
 # JupyterBook-Patches
 
 This Sphinx extension fixes:
