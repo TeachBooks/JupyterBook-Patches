@@ -10,8 +10,8 @@ This section is useful for user type 4-5.
 ```
 +++
 {bdg-primary}`Sphinx Extension`
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15101012.svg)](https://doi.org/10.5281/zenodo.15101012)
+{bdg-link-light}`Included in TeachBooks Template <https://teachbooks.io/manual/external/template/README.html>`
+{bdg-link-primary-line}`Included in TeachBooks Favourites <https://teachbooks.io/manual/features/favourites.html>`
 ````
 
 # JupyterBook-Patches
