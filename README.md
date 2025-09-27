@@ -10,10 +10,8 @@ This section is useful for user type 4-5.
 ```
 +++
 {bdg-primary}`Sphinx Extension`
-{bdg-link-light}`Included in TeachBooks Template <https://teachbooks.io/manual/external/template/README.html>`
-{bdg-link-primary-line}`Included in TeachBooks Favourites <https://teachbooks.io/manual/features/favourites.html>`
-````
-
+{bdg-link-light}`Included in TeachBooks Template <../template/README.html>`
+{bdg-link-primary-line}`Included in TeachBooks Favourites <../../features/favourites.html>`
 # JupyterBook-Patches
 
 This Sphinx extension fixes:
@@ -94,4 +92,4 @@ sphinx:
 This extension is part of [TeachBooks Favourites](https://github.com/TeachBooks/TeachBooks-Favourites), a Sphinx extension which collects all of TeachBooks' favourite features in one place.
 
 ## Contribute
-This tool's repository is stored on [GitHub](https://github.com/TeachBooks/JupyterBook-Patches). The `README.md` of the branch `manual_docs` is also part of the [TeachBooks manual](https://teachbooks.io/manual/external/JupyterBook-Patches/README.html) as a submodule. If you'd like to contribute, you can create a fork and open a pull request on the [GitHub repository](https://github.com/TeachBooks/JupyterBook-Patches). To update the `README.md` shown in the TeachBooks manual, create a fork and open a merge request for the [GitHub repository of the manual](https://github.com/TeachBooks/manual). If you intent to clone the manual including its submodules, clone using: `git clone --recurse-submodulesgit@github.com:TeachBooks/manual.git`.
+This tool's repository is stored on [GitHub](https://github.com/TeachBooks/JupyterBook-Patches). The `README.md` of the branch `manual_docs` is also part of the [TeachBooks manual](../JupyterBook-Patches/README.md) as a submodule. If you'd like to contribute, you can create a fork and open a pull request on the [GitHub repository](https://github.com/TeachBooks/JupyterBook-Patches). To update the `README.md` shown in the TeachBooks manual, create a fork and open a merge request for the [GitHub repository of the manual](https://github.com/TeachBooks/manual). If you intent to clone the manual including its submodules, clone using: `git clone --recurse-submodulesgit@github.com:TeachBooks/manual.git`.
