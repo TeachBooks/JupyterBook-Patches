@@ -22,7 +22,7 @@ def set_mathjax_loading(app:Sphinx,config):
     if 'mathjax' in patch_config['disabled-patches']:
         return
 
-    if 'mathjax3_config' not in config: # make sure some mathjax3_config exists
+    if 'mathjax3_config' not in config or config.mathjax3_config is None: # make sure some mathjax3_config exists
         config.mathjax3_config = {}
 
     if 'loader' not in config.mathjax3_config: # make sure some loader exists
