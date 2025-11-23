@@ -14,3 +14,31 @@ def set_mathjax_path(app:Sphinx):
     app.config.mathjax_path = 'mathjax_patch.js'
 
     pass
+
+def set_mathjax_loading(app:Sphinx,config):
+
+    # check if mathjax patch is disabled
+    patch_config = app.config.patch_config
+    if 'mathjax' in patch_config['disabled-patches']:
+        return
+
+    if 'mathjax3_config' not in config: # make sure some mathjax3_config exists
+        config.mathjax3_config = {}
+
+    if 'loader' not in config.mathjax3_config: # make sure some loader exists
+        config.mathjax3_config['loader'] = {}
+
+    if 'load' not in config.mathjax3_config['loader']: # of load is not set, set it to load ui/lazy
+        config.mathjax3_config['loader']['load'] = ['ui/lazy']
+    else: # check if any ui/ has been set to load, if not add ui/lazy
+        has_ui = False
+        for item in config.mathjax3_config['loader']['load']:
+            if item.startswith('ui/'):
+                has_ui = True
+                break
+        if not has_ui:
+            config.mathjax3_config['loader']['load'].append('ui/lazy')
+        # if item is ui/nonlazy, remove it
+        if 'ui/nonlazy' in config.mathjax3_config['loader']['load']:
+            config.mathjax3_config['loader']['load'].remove('ui/nonlazy')
+    pass    
