@@ -25,20 +25,20 @@ def set_mathjax_loading(app:Sphinx,config):
     if 'mathjax3_config' not in config or config.mathjax3_config is None: # make sure some mathjax3_config exists
         config.mathjax3_config = {}
 
-    if 'loader' not in config.mathjax3_config: # make sure some loader exists
+    if 'loader' not in config.mathjax3_config: # make sure loader exists
         config.mathjax3_config['loader'] = {}
 
-    if 'load' not in config.mathjax3_config['loader']: # of load is not set, set it to load ui/lazy
+    if 'load' not in config.mathjax3_config['loader']: # if load is not set, set it to load ui/lazy
         config.mathjax3_config['loader']['load'] = ['ui/lazy']
-    else: # check if any ui/ has been set to load, if not add ui/lazy
+    else: # check if any ui/nonlazy has been set to load, if not add ui/lazy
         has_ui = False
         for item in config.mathjax3_config['loader']['load']:
-            if item.startswith('ui/'):
+            if item.startswith('ui/nonlazy'):
                 has_ui = True
                 break
         if not has_ui:
             config.mathjax3_config['loader']['load'].append('ui/lazy')
-        # if item is ui/nonlazy, remove it
+        # if item is ui/nonlazy, remove it (as it is not recognised by MathJax)
         if 'ui/nonlazy' in config.mathjax3_config['loader']['load']:
             config.mathjax3_config['loader']['load'].remove('ui/nonlazy')
     pass    
