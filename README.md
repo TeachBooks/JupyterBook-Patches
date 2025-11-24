@@ -16,7 +16,15 @@ This Sphinx extension fixes:
     - an issue where in the Firefox browser the CHTML renderer of MathJax does not render thin lines consistently. Fixed by selecting the SVG renderer *only* for the Firefox browser. 
     - that makes the default loading method of MathJax to be lazy loading, which improves page load times. Can be disabled if needed by either
       - disabling the `mathjax` patch (this also disables the Firefox fix); or
-      - adding `ui/nonlazy` to `config.mathjax3_config['loader']['load']` in your config file. _This value is not defined by MathJax, but introduced by JupyterBook-Patches to allow disabling lazy loading._
+      - adding `ui/nonlazy` to `config.mathjax3_config['loader']['load']` in your config file as shown below. _This value is not defined by MathJax, but introduced by JupyterBook-Patches to allow disabling lazy loading._
+        ```yaml
+        sphinx:
+          config:
+            mathjax3_config:
+              loader:
+                load:
+                  - "ui/nonlazy"
+        ```
 - with a `download` patch:
     - an issue where the standard download button for downloading `.ipynb` and `.md` files opens a new tab in some browsers instead of downloading the file. Fixed by adding the `download` attribute to the download links.
 - with a `hash` patch:
