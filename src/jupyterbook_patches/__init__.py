@@ -5,6 +5,7 @@ from sphinx.util import logging
 
 from jupyterbook_patches._version import version as __version__
 from jupyterbook_patches.utils import load_patches
+from jupyterbook_patches.patches.mathjax_patch import set_mathjax_loading
 
 logger = logging.getLogger(__name__)
 
@@ -50,6 +51,7 @@ def setup(app: Sphinx):
     app.connect("config-inited", setup_patch_configuration)
     app.connect("config-inited", init_patches)
     app.add_config_value("patch_config", {}, "html")
+    app.connect("config-inited", set_mathjax_loading)
 
     return {
         "version": __version__,
