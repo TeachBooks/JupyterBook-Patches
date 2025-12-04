@@ -1,0 +1,16 @@
+
+/* Ensure MathJax containers are not clipped */
+mjx-container { 
+  overflow: visible !important;           /* allow full glyph extents */
+  line-height: normal !important;         /* avoid tight line-height clipping */
+}
+
+/* Inline math sometimes uses vertical-align; keep enough room around it */
+mjx-container[jax="CHTML"][display="false"] {
+  vertical-align: baseline;               /* or try: middle; depends on your typography */
+}
+
+/* Display math: add comfortable margins to avoid overlap with preceding text */
+mjx-container[jax="CHTML"][display="true"] {
+  margin: 1em 0;
+}
