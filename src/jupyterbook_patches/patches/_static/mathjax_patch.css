@@ -3,14 +3,26 @@
 mjx-container { 
   overflow: visible !important;           /* allow full glyph extents */
   line-height: normal !important;         /* avoid tight line-height clipping */
+  display: inline !important;     /* inline avoids block-level width constraints */
+  max-width: none !important;     /* remove any theme-imposed max-width */
 }
 
 /* Inline math sometimes uses vertical-align; keep enough room around it */
 mjx-container[jax="CHTML"][display="false"] {
   vertical-align: baseline;               /* or try: middle; depends on your typography */
+  white-space: normal !important; /* allow wrapping if needed */
 }
 
 /* Display math: add comfortable margins to avoid overlap with preceding text */
 mjx-container[jax="CHTML"][display="true"] {
   margin: 1em 0;
+}
+
+/* Fix parent elements */
+.bd-content .math,
+.bd-content mjx-container,
+.bd-content .cell-output {
+  overflow: visible !important;
+  white-space: normal !important;
+  max-width: none !important;
 }

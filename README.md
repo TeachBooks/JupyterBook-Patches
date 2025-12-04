@@ -14,7 +14,7 @@ This Sphinx extension fixes:
     - an issue where two buttons for interactive matplotlib widget do not appear.
 - with a `mathjax` patch:
     - an issue where in the Firefox browser the CHTML renderer of MathJax does not render thin lines consistently. Fixed by selecting the SVG renderer *only* for the Firefox browser. 
-    - an issue where rendered MathJax using the CHTML renderer is sometimes clipped at the top. Fixed by adding some css to improve the appearance of MathJax elements.
+    - an issue where rendered MathJax using the CHTML renderer is sometimes clipped at the top and/or the right. Fixed by adding some css to improve the appearance of MathJax elements.
     - that makes the default loading method of MathJax to be lazy loading, which improves page load times. Can be disabled if needed by either
       - disabling the `mathjax` patch (this also disables the Firefox fix); or
       - adding `ui/nonlazy` to `config.mathjax3_config['loader']['load']` in your config file as shown below. _This value is not defined by MathJax, but introduced by JupyterBook-Patches to allow disabling lazy loading._
