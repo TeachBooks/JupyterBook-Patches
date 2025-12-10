@@ -34,7 +34,7 @@ This Sphinx extension fixes:
     - that allows the definition of margin/aside elements inside admonitions, instead of only outside. In other words:
     - a `margin` directive can now be nested within one other admonition.
     - a non-figure directive with the class `margin` can now be nested within one other admonition.
-    - a figure directive with the figclass `margin` can now be nested within one other admonition.
+    - a figure directive with the figclass `margin` or `margin-caption` can now be nested within one other admonition.
     - Note that this not apply to `code-cell` directives, as those are not supported inside other directives.
 
 ## Installation
