@@ -30,6 +30,12 @@ This Sphinx extension fixes:
     - an issue where the standard download button for downloading `.ipynb` and `.md` files opens a new tab in some browsers instead of downloading the file. Fixed by adding the `download` attribute to the download links.
 - with a `hash` patch:
     - an issue where if the URL contains a specific element id, the page scrolls to the element on the initial/partial page load and does not scroll to that element after complete page load. Fixed by adding a small javascript that scrolls to the element after complete page load.
+- with a `margin` patch:
+    - that allows the definition of margin/aside elements inside admonitions, instead of only outside. In other words:
+    - a `margin` directive can now be nested within one other admonition.
+    - a non-figure directive with the class `margin` can now be nested within one other admonition.
+    - a figure directive with the figclass `margin` or `margin-caption` can now be nested within one other admonition.
+    - Note that this not apply to `code-cell` directives, as those are not supported inside other directives.
 
 ## Installation
 To install the Sphinx-JupyterBook-Patches, follow these steps:
