@@ -1,4 +1,4 @@
-from jupyterbook_patches.patches import BasePatch, logger
+from jupyterbook_patches.patches import BasePatch
 
 
 class DarkModePatch(BasePatch):
