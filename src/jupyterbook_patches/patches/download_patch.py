@@ -5,7 +5,6 @@ class DownloadPatch(BasePatch):
     name = "download"
 
     def initialize(self, app):
-        logger.info("Initializing Download patch")
         app.add_js_file(filename="download_patch.js")
         app.connect('builder-inited', set_download_path)
 
