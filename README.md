@@ -37,6 +37,13 @@ This Sphinx extension fixes:
     - a non-figure directive with the class `margin` can now be nested within one other admonition.
     - a figure directive with the figclass `margin` or `margin-caption` can now be nested within one other admonition.
     - Note that this not apply to `code-cell` directives, as those are not supported inside other directives.
+- with a `mystnb` patch:
+  - an issue where colon fences (such as `:::`) for top-level `code-cell`s were not allowed.
+    - Colon fences (such as `:::`) for top-level `code-cell`s are now allowed, next to backtick fences (such as ```` ``` ````), inside markdown files.
+  - an issue where the `include` directive did not correctly handle included content from markdown files with top-level `code-cell`s and/or YAML front-matter from markdown files.
+    - The `include` directive now correctly handles included content from markdown files with top-level `code-cell`s and/or YAML front-matter from markdown files.
+  - an issue where markdown files that contain and/or include top-level `code-cell`s were not ensured to be a text-based notebook file.
+    - Markdown files that contain and/or include top-level `code-cell`s are ensured to be a text-based notebook file.
 
 ## Installation
 To install the Sphinx-JupyterBook-Patches, follow these steps:
