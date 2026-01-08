@@ -7,7 +7,7 @@ This patch performs the following fixes for MyST-NB in Sphinx:
 
 from __future__ import annotations
 
-from jupyterbook_patches.patches import BasePatch, logger
+from jupyterbook_patches.patches import BasePatch
 from myst_nb.core.read import is_myst_markdown_notebook
 from pathlib import Path
 
@@ -18,7 +18,6 @@ class MySTNBPatch(BasePatch):
     name = "mystnb"
 
     def initialize(self, app):
-        logger.info("Initializing MyST-NB patch")
         # Remove yaml header in included files. This does not affect the original file.
         # Included content with code-cells will not work properly, as code-cells cannot be nested.
         app.connect("include-read", fix_remove_yaml_from_include)
