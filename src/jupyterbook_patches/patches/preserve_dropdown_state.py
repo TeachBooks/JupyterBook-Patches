@@ -6,7 +6,7 @@ users don't lose their expanded content when jumping to different parts of
 the same page.
 """
 
-from jupyterbook_patches.patches import BasePatch, logger
+from jupyterbook_patches.patches import BasePatch
 from sphinx.application import Sphinx
 
 
@@ -14,5 +14,4 @@ class PreserveDropdownStatePatch(BasePatch):
     name = "preserve_dropdown_state"
 
     def initialize(self, app: Sphinx):
-        logger.info("Initializing preserve dropdown state patch")
         app.add_js_file(filename="preserve_dropdown_state.js")
