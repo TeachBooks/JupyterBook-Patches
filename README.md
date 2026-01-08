@@ -31,6 +31,12 @@ This Sphinx extension fixes:
     - an issue where the standard download button for downloading `.ipynb` and `.md` files opens a new tab in some browsers instead of downloading the file. Fixed by adding the `download` attribute to the download links.
 - with a `hash` patch:
     - an issue where if the URL contains a specific element id, the page scrolls to the element on the initial/partial page load and does not scroll to that element after complete page load. Fixed by adding a small javascript that scrolls to the element after complete page load.
+- with a `preserve_dropdown_state` patch:
+    - an issue where reloading a page causes all dropdown/collapsible admonitions to reset to their default state. Fixed by saving and restoring the open/closed state of all dropdowns using sessionStorage. Supports multiple dropdown types including:
+        - `details.dropdown` - Standard HTML details dropdowns
+        - `details.sd-dropdown` - Sphinx Design dropdowns
+        - `details.toggle-details` - Toggle details elements
+        - `div.dropdown` - Div-based admonition dropdowns with toggle buttons
 - with a `margin` patch:
     - that allows the definition of margin/aside elements inside admonitions, instead of only outside. In other words:
     - a `margin` directive can now be nested within one other admonition.
