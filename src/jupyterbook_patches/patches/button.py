@@ -8,7 +8,6 @@ class MatplotlibButtonPatch(BasePatch):
     name = "button"
 
     def initialize(self, app):
-        logger.info("Initializing button patch")
         app.connect('html-page-context',add_css_fix,priority=1000)
         app.connect('build-finished',remove_js_fix,priority=1000)
 
