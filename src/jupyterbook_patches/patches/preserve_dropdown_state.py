@@ -9,9 +9,10 @@ the same page.
 from jupyterbook_patches.patches import BasePatch
 from sphinx.application import Sphinx
 
+JS_FILE_NAME = "preserve_dropdown_state.js"
 
 class PreserveDropdownStatePatch(BasePatch):
     name = "preserve_dropdown_state"
 
     def initialize(self, app: Sphinx):
-        app.add_js_file(filename="preserve_dropdown_state.js")
+        app.add_js_file(filename=JS_FILE_NAME)
