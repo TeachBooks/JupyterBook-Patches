@@ -14,7 +14,7 @@ from pathlib import Path
 import re
 
 
-class HashJumpPatch(BasePatch):
+class MySTNBPatch(BasePatch):
     name = "mystnb"
 
     def initialize(self, app):
