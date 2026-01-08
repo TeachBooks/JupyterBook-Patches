@@ -5,7 +5,6 @@ class HashJumpPatch(BasePatch):
     name = "hash"
 
     def initialize(self, app):
-        logger.info("Initializing HashJump patch")
         app.add_js_file(filename="fix_hash_jump.js")
         app.connect('builder-inited',set_hash_jump_path)
 
