@@ -24,11 +24,13 @@ This Sphinx extension fixes:
     - an issue where the size of code in a header is not the correct font size. Fix through css.
     - an issue where the sidebar shows a scrollbar even if that's not needed
     - an issue where the margin causes a scroll bar for a window between 992 and 1200px.
-    - an issue where the caption text of a figure is aligned on the left for multi-line caption text
+    - an issue where the caption text of a figure is aligned on the left for multi-line caption text.
+    - an issue where code inside code-cells are aligned according to the parent element, instead of left-aligned.
 - with a `button` patch:
     - an issue where two buttons for interactive matplotlib widget do not appear.
 - with a `mathjax` patch:
     - an issue where in the Firefox browser the CHTML renderer of MathJax does not render thin lines consistently. Fixed by selecting the SVG renderer *only* for the Firefox browser. 
+    - an issue where rendered MathJax using the CHTML renderer is sometimes clipped at the top and/or the right. Fixed by adding some css to improve the appearance of MathJax elements.
     - that makes the default loading method of MathJax to be lazy loading, which improves page load times. Can be disabled if needed by either
       - disabling the `mathjax` patch (this also disables the Firefox fix); or
       - adding `ui/nonlazy` to `config.mathjax3_config['loader']['load']` in your config file as shown below. _This value is not defined by MathJax, but introduced by JupyterBook-Patches to allow disabling lazy loading._
@@ -44,6 +46,19 @@ This Sphinx extension fixes:
     - an issue where the standard download button for downloading `.ipynb` and `.md` files opens a new tab in some browsers instead of downloading the file. Fixed by adding the `download` attribute to the download links.
 - with a `hash` patch:
     - an issue where if the URL contains a specific element id, the page scrolls to the element on the initial/partial page load and does not scroll to that element after complete page load. Fixed by adding a small javascript that scrolls to the element after complete page load.
+- with a `margin` patch:
+    - that allows the definition of margin/aside elements inside admonitions, instead of only outside. In other words:
+    - a `margin` directive can now be nested within one other admonition.
+    - a non-figure directive with the class `margin` can now be nested within one other admonition.
+    - a figure directive with the figclass `margin` or `margin-caption` can now be nested within one other admonition.
+    - Note that this not apply to `code-cell` directives, as those are not supported inside other directives.
+- with a `mystnb` patch:
+  - an issue where colon fences (such as `:::`) for top-level `code-cell`s were not allowed.
+    - Colon fences (such as `:::`) for top-level `code-cell`s are now allowed, next to backtick fences (such as ```` ``` ````), inside markdown files.
+  - an issue where the `include` directive did not correctly handle included content from markdown files with top-level `code-cell`s and/or YAML front-matter from markdown files.
+    - The `include` directive now correctly handles included content from markdown files with top-level `code-cell`s and/or YAML front-matter from markdown files.
+  - an issue where markdown files that contain and/or include top-level `code-cell`s were not ensured to be a text-based notebook file.
+    - Markdown files that contain and/or include top-level `code-cell`s are ensured to be a text-based notebook file.
 
 ## Installation
 To install the Sphinx-JupyterBook-Patches, follow these steps:

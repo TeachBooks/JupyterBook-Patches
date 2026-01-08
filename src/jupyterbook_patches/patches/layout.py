@@ -12,3 +12,4 @@ class DarkModePatch(BasePatch):
         app.add_css_file(filename="fix_sidebar_scroll.css")
         app.add_css_file(filename="fix_margin.css")
         app.add_css_file(filename="fix_align_text_captions.css")
+        app.add_css_file(filename="fix_align_code.css")

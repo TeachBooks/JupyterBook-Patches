@@ -1,0 +1,18 @@
+/* Inline math */
+.bd-content mjx-container[jax="CHTML"][display="false"] {
+  vertical-align: baseline;
+  white-space: normal !important;
+  overflow: visible !important;
+  display: inline !important;
+  max-width: none !important;
+}
+
+/* Display math */
+.bd-content mjx-container[jax="CHTML"][display="true"] {
+  margin: 1em 0;
+  overflow-y: visible !important;
+  display: inline !important;
+  max-width: none !important;
+  white-space: normal !important;
+  padding-top: 0.2rem !important;
+}
