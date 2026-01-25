@@ -5,7 +5,7 @@
   overflow: visible !important;
   display: inline !important;
   max-width: none !important;
-  line-height: normal !important;
+  line-height: 1 !important;
 }
 
 /* Display math */
