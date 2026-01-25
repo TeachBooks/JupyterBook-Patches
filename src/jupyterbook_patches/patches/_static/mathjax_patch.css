@@ -1,10 +1,11 @@
 /* Inline math */
-.bd-content mjx-container[jax="CHTML"][display="false"] {
+.bd-content mjx-container[jax="CHTML"]:not([display="true"]) {
   vertical-align: baseline;
   white-space: normal !important;
   overflow: visible !important;
   display: inline !important;
   max-width: none !important;
+  line-height: normal;
 }
 
 /* Display math */
