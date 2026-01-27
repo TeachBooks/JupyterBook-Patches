@@ -8,3 +8,8 @@
   max-width: none !important;
   overflow: visible !important;
 }
+
+/* Fix vertical visibility of display math */
+.bd-content div.math mjx-container {
+  padding-top: 0.2rem !important;
+}
