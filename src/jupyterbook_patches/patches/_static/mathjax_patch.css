@@ -1,3 +1,10 @@
+/* Fix vertical visibility of inline and display math */
 .bd-content mjx-container[jax="CHTML"] {
   line-height: 1.2 !important;
+}
+
+/* Fix horizontal visibility of inline math */
+.bd-content span.math {
+  max-width: none !important;
+  overflow: visible !important;
 }
