@@ -1,14 +1,14 @@
 /* Admonition-todo */
 div.admonition-todo {
-    border-color: var(--tud-pink) !important;
-    background-color: var(--tud-pink-min) !important;
-    background: linear-gradient(0deg, var(--tud-red-min), var(--tud-orange-min), var(--tud-yellow-min), var(--tud-green-min), var(--tud-darkGreen-min), var(--tud-cyan-min), var(--tud-blue-min), var(--tud-purple-min), var(--tud-pink-min), var(--tud-raspberry-min)) !important;
+    border-color: hotpink;
+    background-color: #fce4ec;
+    background: linear-gradient(0deg, #ffebee, #fff3e0, #fffde7, #e8f5e9, #e0f2f1, #e0f7fa, #e3f2fd, #f3e5f5, #fce4ec, #fce4ec);
 }
 div.admonition-todo > .admonition-title {
-    background-color: var(--tud-pink-mid) !important;
-    background: linear-gradient(90deg, var(--tud-red-mid), var(--tud-orange-mid), var(--tud-yellow-mid), var(--tud-green-mid), var(--tud-darkGreen-mid), var(--tud-cyan-mid), var(--tud-blue-mid), var(--tud-purple-mid), var(--tud-pink-mid), var(--tud-raspberry-mid)) !important;
+    background-color: #f48fb1;
+    background: linear-gradient(90deg, #ef9a9a, #ffcc80, #fff176, #a5d6a7, #80cbc4, #80deea, #90caf9, #ce93d8, #f48fb1, #f06292);
 }
 div.admonition-todo > .admonition-title::after {
-    color: var(--tud-pink) !important;
-    content: "\f7d9" !important;
+    color: hotpink;
+    content: "\f7d9";
 }
