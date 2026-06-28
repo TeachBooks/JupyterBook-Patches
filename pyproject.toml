@@ -11,7 +11,8 @@ authors = [
 ]
 description = "A collection of useful Jupyter Book v1 patches."
 dependencies = [
-    "sphinx"
+    "sphinx",
+    "pyyaml"
 ]
 requires-python = ">=3.9"
 
