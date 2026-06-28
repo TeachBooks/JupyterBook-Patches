@@ -50,6 +50,19 @@ This Sphinx extension fixes:
     - The `include` directive now correctly handles included content from markdown files with top-level `code-cell`s and/or YAML front-matter from markdown files.
   - an issue where markdown files that contain and/or include top-level `code-cell`s were not ensured to be a text-based notebook file.
     - Markdown files that contain and/or include top-level `code-cell`s are ensured to be a text-based notebook file.
+- with an `index` patch:
+  - that adds a sticky jumpbox to the index page, allowing users to quickly navigate to different sections of the index.
+  - that adds a scroll-margin-top to the index headings, ensuring that when users click on a jumpbox link, the corresponding section is not hidden behind the sticky jumpbox.
+  - that sorts the multiples instances of the same index entry based on the order of the documents in the toctree, instead of sorting them alphabetically. This ensures that the index entries are displayed in a more logical and user-friendly manner.
+  - displays index entries with multiple instances in a more logical manner. In example, if the entry "foo" appears four times, the index originally displayed it as:
+    ```
+    foo, [1], [2], [3]
+    ```
+    where `foo`, `[1]`, `[2]` and `[3]` are links to the four instances of "foo". The patch now displays it as:
+    ```
+    foo [1], [2], [3], [4]
+    ```
+    
 
 ## Installation
 To install the Sphinx-JupyterBook-Patches, follow these steps:
