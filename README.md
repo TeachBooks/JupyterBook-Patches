@@ -53,8 +53,8 @@ This Sphinx extension fixes:
 - with an `index` patch:
   - that adds a sticky jumpbox to the index page, allowing users to quickly navigate to different sections of the index.
   - that adds a scroll-margin-top to the index headings, ensuring that when users click on a jumpbox link, the corresponding section is not hidden behind the sticky jumpbox.
-  - that sorts the multiples instances of the same index entry based on the order of the documents in the toctree, instead of sorting them alphabetically. This ensures that the index entries are displayed in a more logical and user-friendly manner.
-  - displays index entries with multiple instances in a more logical manner. In example, if the entry "foo" appears four times, the index originally displayed it as:
+  - that sorts the multiple instances of the same index entry based on the order of the documents in the toctree, instead of sorting them alphabetically. This ensures that the index entries are displayed in a more logical and user-friendly manner.
+  - displays index entries with multiple instances in a more logical manner. For example, if the entry "foo" appears four times, the index originally displayed it as:
     ```
     foo, [1], [2], [3]
     ```
