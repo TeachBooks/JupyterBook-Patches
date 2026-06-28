@@ -13,7 +13,7 @@ def set_static_path(app):
 
 def setup_patch_configuration(app: Sphinx,config):
     patch_config = app.config.patch_config
-    defaults = {"disabled-patches": []}
+    defaults = {"disabled-patches": [],"templates_path": str(Path(__file__).parent / "patches" / "_templates")}
 
     for key, val in defaults.items():
         if key not in patch_config:

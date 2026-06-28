@@ -1,0 +1,10 @@
+.genindex-jumpbox {
+    position: sticky;
+    top: 3rem;
+    background-color: var(--pst-color-background);
+    z-index: 100;
+}
+
+h2.genindex-subheading {
+    scroll-margin-top: 2rem; /* Adjust based on .genindex-jumpbox height */
+}
