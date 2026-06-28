@@ -15,6 +15,7 @@ class IndexPatch(BasePatch):
     def initialize(self, app):
         app.connect('builder-inited', add_template_path)
         app.connect("builder-inited", patch_index)
+        app.add_css_file(filename="index_patch.css")
 
 def add_template_path(app:Sphinx, exception=None):
     if exception:
