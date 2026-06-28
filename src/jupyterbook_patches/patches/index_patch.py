@@ -30,26 +30,28 @@ def add_template_path(app:Sphinx, exception=None):
                 loader.searchpath.insert(0, X)
 
 def patch_index(app):
-    env = app.env
-
-    # -----------------------------
-    # Build TOC document order
-    # -----------------------------
-    doc_order = build_doc_order(env)
-
-    # -----------------------------
-    # Build anchor positions per doc
-    # -----------------------------
-    anchor_positions = build_anchor_positions(env)
+    # The index is generated later in the build; defer TOC / anchor computation
+    # until create_index is called so env.found_docs / doctrees are available.
+    doc_order = None
+    anchor_positions = None
 
     # -----------------------------
     # Monkeypatch
     # -----------------------------
+    if getattr(IndexEntries, "_jupyterbook_patches_index_patched", False):
+        return
+    IndexEntries._jupyterbook_patches_index_patched = True
+
     original = IndexEntries.create_index
 
     def custom_create_index(self, builder, group_entries=True):
-        content = original(self, builder, group_entries)
+        nonlocal doc_order, anchor_positions
+        if doc_order is None or anchor_positions is None:
+            env = builder.env
+            doc_order = build_doc_order(env)
+            anchor_positions = build_anchor_positions(env)
 
+        content = original(self, builder, group_entries)
         for _, entries in content:
             for i, (term, (links, subitems, key)) in enumerate(entries):
 
