@@ -43,8 +43,6 @@ def setup(app: Sphinx):
     app.connect("config-inited", init_patches)
     app.add_config_value("patch_config", {}, "html")
     app.connect("config-inited", set_mathjax_loading)
-    # store template_path in memory for use in index_patch.py
-
 
     return {
         "version": __version__,
