@@ -85,12 +85,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const previous = navLinks[currentIndex - 1] || null;
   const next = navLinks[currentIndex + 1] || null;
 
+  const escapeHtml = (value) =>
+    value
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+
   const buildLink = (direction, link) => {
     if (!link || !link.getAttribute("href") || link.getAttribute("href") === "#") {
       return "";
     }
 
-    const title = (link.textContent || "").trim();
+    const title = escapeHtml((link.textContent || "").trim());
     if (!title) {
       return "";
     }
