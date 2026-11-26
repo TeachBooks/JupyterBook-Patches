@@ -13,3 +13,4 @@ class DarkModePatch(BasePatch):
         app.add_css_file(filename="fix_align_text_captions.css")
         app.add_css_file(filename="fix_align_code.css")
         app.add_css_file(filename="fix_todo.css")
+        app.add_css_file(filename="fix_tasklist.css")

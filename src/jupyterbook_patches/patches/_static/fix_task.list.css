@@ -1,0 +1,13 @@
+.contains-task-list > li.task-list-item {
+  list-style-type: none !important;
+}
+
+.contains-task-list > li.task-list-item > p:first-child {
+  position: relative !important;
+}
+
+.contains-task-list > li.task-list-item > p:first-child > input.task-list-item-checkbox {
+  position: absolute !important;
+  inset-inline-end: 100% !important;
+  margin-inline-end: 0.4em !important;
+}

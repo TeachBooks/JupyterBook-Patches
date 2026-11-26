@@ -11,6 +11,7 @@ This Sphinx extension fixes:
     - an issue where the margin causes a scroll bar for a window between 992 and 1200px.
     - an issue where the caption text of a figure is aligned on the left for multi-line caption text.
     - an issue where code inside code-cells are aligned according to the parent element, instead of left-aligned.
+    - an issue where tasklists showed both the bullet and the checkbox, instead of only the checkbox.
 - with a `button` patch:
     - an issue where two buttons for interactive matplotlib widget do not appear.
 - with a `mathjax` patch:
